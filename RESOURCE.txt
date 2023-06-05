@@ -8,7 +8,7 @@ Redirecting to Current Portfolio...
 https://taksas.net
 
 - ↓ Time until redirect(sec) ↓
-200000
+10
 
 - ↓ A in text (A + time + B) regarding redirection ↓
 Redirect after
