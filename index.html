@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <style type="text/css">
+      body {min-height: 100vh; background-color: #bbb; text-align: center; margin: 0;}
+      #contents {min-height: 100vh; display: flex; flex-direction: column; justify-content: center;}
+      .main {flex: 1;}
+      .name {font-size: 48px;}
+      .instruction {font-size: 36px;}
+      .footer  {}
+    </style>
+  </head>
+  <body>
+    <div id="contents">
+    <script type = "text/javascript">
+      let contents = document.getElementById('contents');
+      let lines;
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'RESOURCE.txt', true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            contents.textContent = '';
+            lines = xhr.responseText.split('\n');
+
+
+            let line = '<div class="main"><br />';
+
+            line += '<img src="https://github.com/' + lines[1] + '.png" alt="Avatar Icon"><br /><br />';
+            line += '<div class="name">' + lines[1] + '</div><br />';
+            line += '<div class="instruction">' + lines[4] + '</div><br />';
+            line += lines[13] + ' ' + lines[10] + ' ' + lines[16] + '<br />';
+            
+            line += '</div><div class="footer">';
+            line += lines[19] + ' : ' + document.lastModified + '<br />';
+            line += 'This page is generated using the following project: <a href="https://github.com/taksas/domain_redirector" target="_blank">domain_redirector</a>' + '<br /><br />';
+            line += '</div>';
+
+
+            contents.insertAdjacentHTML('afterbegin', line);
+            setTimeout(function () {
+              window.location = lines[7];
+            }, parseInt(lines[10], 10)*1000);
+          } else {
+            contents.textContent = 'Error has occurred!';
+          }
+        } else {
+          contents.textContent = 'Loading...';
+        }
+      }
+      xhr.send(null);
+      
+    </script>
+    <noscript>JavaScript seems to be disabled. Please enable it.</noscript>
+  </body>
+</html>

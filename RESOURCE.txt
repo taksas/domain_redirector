@@ -1,0 +1,20 @@
+- ↓ Your GitHub Name ↓
+taksas
+
+- ↓ Instruction ↓
+Redirecting to Current Portfolio...
+
+- ↓ Redirecting URL ↓
+https://taksas.net
+
+- ↓ Time until redirect(sec) ↓
+200000
+
+- ↓ A in text (A + time + B) regarding redirection ↓
+Redirect after
+
+- ↓ B in text (A + time + B) regarding redirection ↓
+seconds.<br /> or visit my <a href="https://github.com/taksas/">GitHub</a>.
+
+-↓ About the last modification date of this html itself ↓
+Last updated
